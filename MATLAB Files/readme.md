@@ -44,13 +44,16 @@ This MATLAB project models and visualizes a modular robot built from stacked Ste
 
 ## USAGE WORKFLOW
 1. **Run** `define_robot` to create `Robot_Desc.mat`.  
-2. **Call** `dirkin_serial(q)` to compute serial link frames for joint vector `q`.  
-3. **Call** `invkin_parallel(frames_parallel)` to compute leg vectors and lengths.  
-4. **Use** `compute_jacobian_serial` or `compute_partial_jacobian_parallel` for velocity mapping.  
-5. **Visualize** the structure with `draw_robot_serial` or `draw_robot_parallel`.  
-6. **Use** `res_rates(P_des, n, q_start)` to drive the pen tip to a desired 3D point.  
-7. **Use** `simulate_robot(stack_count, shape)` to execute a path and plot performance metrics (iteration count, run time, leg‐length changes).
+2. **Use** `simulate_robot(stack_count, shape)` to execute a path and plot performance metrics (iteration count, run time, leg‐length changes).
 
+## simulate_robot WORKFLOW
+1. **Call** `res_rates(P_des, n, q_start)` to drive the pen tip to a desired 3D point.
+
+## res_rates WORKFLOW
+1. **Call** `dirkin_serial(q)` to compute serial link frames for joint vector `q`.  
+2. **Call** `invkin_parallel(frames_parallel)` to compute leg vectors and lengths.  
+3. **Use** `compute_jacobian_serial` or `compute_partial_jacobian_parallel` for velocity mapping.  
+4. **Visualize** the structure with `draw_robot_serial` or `draw_robot_parallel`.
 ---
 
 ## FUNCTION SUMMARIES
